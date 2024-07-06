@@ -1,0 +1,33 @@
+package ui
+
+type InputData struct {
+	Name        string
+	Type        string
+	Value       any
+	Label       string
+	Placeholder string
+	IsRequired  bool
+	Error       string
+}
+
+templ Input(data InputData) {
+	<label class="form-control w-full">
+		<div class="label">
+			<span class="label-text">{ data.Label }</span>
+		</div>
+		<input
+			if data.IsRequired {
+				required
+			}
+			name={ data.Name }
+			type={ data.Type }
+			placeholder={ data.Placeholder }
+			class="input input-bordered w-full"
+		/>
+		<div class="label">
+			if data.Error != "" {
+				<span class="label-text-alt text-error">{ data.Error }</span>
+			}
+		</div>
+	</label>
+}

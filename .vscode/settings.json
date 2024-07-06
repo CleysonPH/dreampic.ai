@@ -1,0 +1,11 @@
+{
+    "[templ]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "a-h.templ",
+        "editor.tabSize": 2
+    },
+    "tailwindCSS.emmetCompletions": true,
+    "tailwindCSS.includeLanguages": {
+        "templ": "html"
+    }
+}

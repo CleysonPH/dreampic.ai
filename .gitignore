@@ -188,3 +188,4 @@ dist
 bin
 *_templ.go*
 public/styles.css
+tmp

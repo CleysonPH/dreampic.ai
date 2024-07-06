@@ -1,0 +1,35 @@
+package auth
+
+import (
+	"github.com/CleysonPH/dreampic.ai/view/layout"
+	"github.com/CleysonPH/dreampic.ai/view/ui"
+)
+
+templ Login() {
+	@layout.App(false) {
+		<div class="flex justify-center items-center h-screen">
+			<div class="max-w-screen-sm w-full bg-base-300 py-12 px-16 rounded-xl">
+				<h1 class="text-center text-xl font-black mb-6">Login to Dreampi.ai</h1>
+				<div class="space-y-6">
+					@ui.Input(ui.InputData{
+						Label:       "Email address",
+						Name:        "email",
+						Type:        "email",
+						Placeholder: "Enter your email",
+						IsRequired:  true,
+					})
+					@ui.Input(ui.InputData{
+						Label:       "Password",
+						Name:        "password",
+						Type:        "password",
+						Placeholder: "Enter your password",
+						IsRequired:  true,
+					})
+					<button class="btn btn-primary w-full">
+						Login <i class="fa-solid fa-arrow-right"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	}
+}

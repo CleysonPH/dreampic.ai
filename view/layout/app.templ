@@ -1,7 +1,9 @@
 package layout
 
+import "github.com/CleysonPH/dreampic.ai/view/ui"
+
 templ App(nav bool) {
-    <!DOCTYPE html>
+	<!DOCTYPE html>
 	<html lang="en" data-theme="dark">
 		<head>
 			<title>Dreampic.ai</title>
@@ -15,7 +17,7 @@ templ App(nav bool) {
 		</head>
 		<body class="antialiased">
 			if nav {
-				navigation
+				@ui.Navigation()
 			}
 			{ children... }
 		</body>
